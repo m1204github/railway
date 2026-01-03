@@ -15,14 +15,14 @@ export SUB_NAME=${SUB_NAME:-''}
 export MYIP_URL=${MYIP_URL:-''}
 export MY_DOMAIN=${MY_DOMAIN:-''}
 
-export UUID=${UUID:-'mqz1204cfsite-railway'}
+export UUID=${UUID:-'mqz1204cfsite-koyeb'}
 export NEZHA_VERSION=${NEZHA_VERSION:-''}
 export NEZHA_SERVER=${NEZHA_SERVER:-''}
 export NEZHA_KEY=${NEZHA_KEY:-''}
 export NEZHA_PORT=${NEZHA_PORT:-'443'}
 
-export ARGO_DOMAIN=${ARGO_DOMAIN:-'rw-1204.cfsite.qzz.io'}
-export ARGO_AUTH=${ARGO_AUTH:-'eyJhIjoiODE1MjkzMDQxNzVmM2E0YjllMWJlNTc5NTBlNWZmNzMiLCJ0IjoiYmE2YWNiZmMtNzdkZS00NzdlLThiNDYtODcyODBjMTMxNTZkIiwicyI6Ik5qQTRNRGsyWVRVdE1HSmlOeTAwTldVMkxXSmpORFF0TkRjelpHRmhObUU0TVdOayJ9'}
+export ARGO_DOMAIN=${ARGO_DOMAIN:-'koyeb.cfsite.qzz.io'}
+export ARGO_AUTH=${ARGO_AUTH:-'eyJhIjoiODE1MjkzMDQxNzVmM2E0YjllMWJlNTc5NTBlNWZmNzMiLCJ0IjoiNmZjZDYyZGQtMDU2Mi00NzdjLWIwNDItNTA3NDc5MTRmYTVkIiwicyI6Ik5EWXlZelk1TURJdE1qa3pOQzAwWlRkaExXSTVaRGt0TXpOaVl6ZGpOV1JqT0RVeCJ9'}
 
 hint() { echo -e "\033[33m\033[01m$*\033[0m"; }
 
