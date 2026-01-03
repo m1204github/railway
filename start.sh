@@ -82,7 +82,7 @@ initialize_downloads() {
   fi
 
   if [ -n "${ECH_PROTOCOL}" ] && [ -n "${ECH_PORT}" ]; then
-    download_program "${FILE_PATH}/ech" "https://github.com/kahunama/myfile/releases/download/main/ech-tunnel-linux-arm64" "https://github.com/kahunama/myfile/releases/download/main/ech-tunnel-linux-amd64"
+    download_program "${FILE_PATH}/ech" "https://github.com/mqzgithub1203/dock/releases/download/2.0/x-tunnel-linux-arm64" "https://github.com/mqzgithub1203/dock/releases/download/1.0/x-tunnel-linux-amd64"
     sleep 3
     chmod +x ${FILE_PATH}/ech
   fi
