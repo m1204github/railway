@@ -1,4 +1,4 @@
-name: Build and Push to GHCR
+name: Build and Push Docker Image (GHCR + Docker Hub)
 
 on:
   push:
@@ -9,27 +9,37 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    # GHCR 必须的权限
     permissions:
       contents: read
-      packages: write   # 👈 推送 GHCR 必须
+      packages: write
 
     steps:
       # 1️⃣ 拉取代码
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ 登录 GitHub Container Registry
-      - name: Log in to GHCR
+      # 2️⃣ 登录 GitHub Container Registry (GHCR)
+      - name: Log in to GitHub Container Registry
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # 3️⃣ 构建并推送 Docker 镜像
+      # 3️⃣ 登录 Docker Hub（⚠️ 必须）
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      # 4️⃣ 构建并同时推送到 GHCR + Docker Hub
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository }}mqz1204:latest
+          tags: |
+            ghcr.io/${{ github.repository }}:koyeb
+            mqz1204/koyeb:latest
