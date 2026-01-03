@@ -41,5 +41,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:koyeb
+            ghcr.io/${{ github.repository }}/koyeb:ls
             mqz1204/koyeb
