@@ -3,7 +3,7 @@ name: Build and Push Docker Image (GHCR + Docker Hub)
 on:
   push:
     branches:
-      - koyeb
+      - main
 
 jobs:
   build:
