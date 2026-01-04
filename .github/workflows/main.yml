@@ -42,4 +42,4 @@ jobs:
           push: true
           tags: |
             ghcr.io/${{ github.repository }}/koyeb:ls2
-            mqz1204/koyebls
+            mqz1204/koyeb-ls
