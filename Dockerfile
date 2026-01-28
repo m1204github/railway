@@ -12,6 +12,6 @@ RUN apk update && \
     npm install
 
 COPY index.js start.sh ./
-RUN chmod +x start.sh
+
 
 ENTRYPOINT [ "node", "index.js" ]
